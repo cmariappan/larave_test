@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "c31d6153-0111-4bfa-ad2a-14b5cf77844a",
+		"name": "mariappan-laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/admin/login?user_name=admin123&password=testing123123",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"login"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "admin123"
+								},
+								{
+									"key": "password",
+									"value": "testing123123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invite users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/admin/invite-user?email=example@gmail.com",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"invite-user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "example@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/user/register/{{user_email}}?user_name=user_213&password=123546789",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"register",
+								"{{user_email}}"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "user_213"
+								},
+								{
+									"key": "password",
+									"value": "123546789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enter Otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/user/enterotp?otp=421628",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"enterotp"
+							],
+							"query": [
+								{
+									"key": "otp",
+									"value": "421628"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/user/login?user_name=user_213&password=123546789",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "user_213"
+								},
+								{
+									"key": "password",
+									"value": "123546789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/user/viewprofile",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"viewprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/G:/IMG_20211008_201513.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/user/updateprofile?user_name=user_213&email=shajisamgame@gmail.com&name=shaji&password=123456789",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateprofile"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "user_213"
+								},
+								{
+									"key": "email",
+									"value": "shajisamgame@gmail.com"
+								},
+								{
+									"key": "name",
+									"value": "shaji"
+								},
+								{
+									"key": "password",
+									"value": "123456789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile avatar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/G:/IMG_20211008_201513.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/user/updateprofileavatar",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"updateprofileavatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
